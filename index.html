@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home №1</title>
+</head>
+<body>
+<script>
+    //1
+    var name = prompt("Ваше имя?");
+    alert("Здравствуйте, " + name);
+    //2
+    const getdate = 2019;
+    var birth = prompt("Ваш год рождения?");
+    var age = getdate - birth;
+    alert("Ваш возраст - " + age);
+    //3
+    var a = prompt("Длина стороны квадрата?");
+    var p = a * 4;
+    alert("Периметр - " + p);
+    //4
+    var r = prompt("Радиус окружности?");
+    var s = 3.14 * r * r;
+    alert("Площадь - " + s);
+    //5
+    var l = prompt("Расстояние между городами?");
+    var h = prompt("За сколько часов вы хотите добраться?");
+    var u = l/h;
+    alert("Вы должны ехать со скоростью - " + u);
+    //6
+    var dollar = prompt("Доллар -");
+    var euro = dollar * 0.88;
+    alert("Евро - " + euro);
+    //7
+    var flash = prompt("Объем флешки в ГБ -");
+    var vlezet = (flash * 1024) / 820;
+    alert("Влезет - " + vlezet);
+    //8
+    var dengi = prompt("Сколько денег -");
+    var chocolate = prompt("Сколько стоит шоколад -");
+    var kupit = dengi / chocolate >> 0;
+    var ostatok = dengi % chocolate;
+    alert("Купит - " + kupit + " штук шоколада");
+    alert("Остаток - " + ostatok);
+    //9
+    var num = prompt("Введите число");
+    alert(num.split("").reverse().join(""));
+    //10
+    var number = prompt("Введите число");
+    number % 2 == 0 ? alert("Четное") : alert("Нечетное");
+</script>
+</body>
+</html>
