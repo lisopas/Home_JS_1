@@ -44,7 +44,10 @@
     alert("Остаток - " + ostatok);
     //9
     var num = prompt("Введите число");
-    alert(num.split("").reverse().join(""));
+    var hundred = (num / 100) >> 0;
+    var ten = ((num / 10) % 10) >> 0;
+    var one = (num % 10) >> 0;
+    alert("Ваше число - " + one + ten + hundred);
     //10
     var number = prompt("Введите число");
     number % 2 == 0 ? alert("Четное") : alert("Нечетное");

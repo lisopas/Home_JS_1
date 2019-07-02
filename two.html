@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home №2</title>
+</head>
+<body>
+<script>
+    //1
+    var age = prompt("Ваш возраст?");
+    if (age >= 0 && age <= 2)
+        alert("Ребенок");
+    if (age >= 12 && age < 18)
+        alert("Подросток");
+    if (age >= 18 && age < 60)
+        alert("Взрослый");
+    if (age >= 60)
+        alert("Пенсионер");
+    //2
+    var symbol = prompt("Число от 0 до 9");
+    switch (symbol) {
+        case '0':
+            alert(")");
+            break;
+        case '1':
+            alert("!");
+            break;
+        case '2':
+            alert("@");
+            break;
+        case '3':
+            alert("#");
+            break;
+        case '4':
+            alert("$");
+            break;
+        case '5':
+            alert("%");
+            break;
+        case '6':
+            alert("^");
+            break;
+        case '7':
+            alert("&");
+            break;
+        case '8':
+            alert("*");
+            break;
+        case '9':
+            alert("(");
+            break;
+    }
+    //3
+    var num = prompt("Введите число");
+    var hundred = (num / 100) >> 0;
+    var ten = ((num / 10) % 10) >> 0;
+    var one = (num % 10) >> 0;
+    if (hundred == ten || ten == one || one == hundred)
+        alert("Есть одинаковые числа!");
+    else
+        alert("Нет одинаковых чисел!");
+    //4
+    var data = prompt("Введите год");
+    data % 4 == 0 ? alert("Високосный год") : alert("Невисокосный год");
+    //5
+    var palindrom = prompt("Введите число");
+    var ptenthousand = (palindrom / 10000) >> 0;
+    var pthousand = ((palindrom / 1000) % 10) >> 0;
+    var phundred = ((palindrom / 100) % 10) >> 0;
+    var pten = ((palindrom / 10) % 10) >> 0;
+    var pone = (palindrom % 10) >> 0;
+    if(ptenthousand == pone & pthousand == pten)
+        alert("Число - " + ptenthousand + "" + pthousand + "" + phundred + "" + pten + "" + pone + " - палиндром");
+    else
+        alert("Число - " + ptenthousand + "" + pthousand + "" + phundred + "" + pten + "" + pone + " - не палиндром");
+    //6
+    var dollars = prompt("Введите кол-во долларов");
+    var choiсe = prompt("Во что конвертируем? 1 - EUR, 2 - UAH, 3 - AZN");
+    switch (choiсe) {
+        case '1':
+            alert("У вас - " + dollars * 0.88 + " евро");
+            break;
+        case '2':
+            alert("У вас - " + dollars * 26.30 + " гривен");
+            break;
+        case '3':
+            alert("У вас - " + dollars * 1.70 + " манатов");
+            break; }
+    //7
+    var pokupka = prompt("Сумма покупки");
+    if (pokupka > 500)
+        alert("Скидка 7 процентов, итого - " + (pokupka - (pokupka * 0.07)));
+    else if (pokupka > 300 && pokupka <= 500)
+        alert("Скидка 5 процентов, итого - " + (pokupka - (pokupka * 0.05)));
+    else if (pokupka >= 200 && pokupka <= 300)
+        alert("Скидка 3 процента, итого - " + (pokupka - (pokupka * 0.03)));
+    //8
+    var l = prompt("Длина окружности");
+    var a = prompt("Периметр квадрата");
+    l <= a ? alert("Влезет") : alert("Не влезет");
+    //9
+    var sum = 0;
+    var qone = prompt("Введите число 2");
+    qone == 2 ? sum += 2 : sum;
+    var qone = prompt("Введите число 1");
+    qone == 1 ? sum += 2 : sum;
+    var qone = prompt("Введите число 3");
+    qone == 3 ? sum += 2 : sum;
+    alert("Набрано баллов: " + sum);
+    //10
+    var den = prompt("Введите день");
+    var mesac = prompt("Введите месяц");
+    var god = prompt("Введите год");
+
+    var sledgod = god;
+    var sledmesac = mesac;
+    var sledden = ++den;
+    if (sledgod % 4 == 0 && mesac == 2 && den > 29) {
+        sledden = 1;
+        sledmesac++; }
+    else if ((mesac == 2) && den > 28) {
+        sledden = 1;
+        sledmesac++; }
+    else if ((mesac == 1 || mesac == 3 || mesac == 5 || mesac == 7 || mesac == 8 || mesac == 10 || mesac == 12) && den > 31) {
+        sledden = 1;
+        sledmesac++ }
+    else if ((mesac == 4 || mesac == 6 || mesac == 8 || mesac == 9 || mesac == 11) && den > 30) {
+        sledden = 1;
+        sledmesac++ }
+    if (sledmesac == 13) {
+        sledmesac = 1;
+        sledgod++; }
+    alert("Текущая дата - " + sledden + "." + sledmesac + "." + sledgod);
+</script>
+</body>
+</html>
